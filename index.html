@@ -251,6 +251,14 @@
             margin-bottom: 20px;
         }
         
+        .highlight {
+            background-color: #f0f0f0; /* Cinza claro */
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #333;
+        }
+        
         .openai-logo {
             margin-top: 20px;
             opacity: 0.7;
@@ -322,7 +330,7 @@
     <main class="container">
         <section class="intro animate">
             <h2>Introdução</h2>
-            <p>Neste manual, vamos mostrar como você pode configurar um GPT personalizado na plataforma da OpenAI. Essa funcionalidade está disponível apenas para usuários das versões Plus ou Pro.</p>
+            <p>Neste manual, vamos mostrar como você pode configurar um GPT personalizado na plataforma da OpenAI. Essa funcionalidade está disponível apenas para usuários das versões <a href="https://openai.com/index/chatgpt-plus/" target="_blank"; text-decoration: underline;">Plus</a> ou <a href="https://openai.com/index/introducing-chatgpt-pro/" target="_blank"; text-decoration: underline;">Pro.</a> </p>
             
             <div class="image-placeholder">
                 <img src="gpt.png" alt="Dashboard OpenAI" class="dashboard-img">
@@ -382,21 +390,35 @@
             <div class="example-grid">
                 <div>
                     <div class="example-item">
-                        <div class="example-item-title">Título:</div>
+                        <div class="example-item-title">Nome:</div>
                         <div class="example-item-content">TechMax Helper</div>
                     </div>
                     
                     <div class="example-item">
-                        <div class="example-item-title">Subtítulo:</div>
+                        <div class="example-item-title">Descrição:</div>
                         <div class="example-item-content">Assistente Virtual para Suporte Técnico</div>
                     </div>
                 </div>
                 
                 <div>
                     <div class="example-item">
-                        <div class="example-item-title">Descrição:</div>
+                        <div class="example-item-title">Instruções:</div>
                         <div class="example-item-content">
-                            "O TechMax Helper é um assistente virtual projetado para fornecer suporte técnico aos clientes da TechMax. A empresa, com mais de 10 anos de experiência, oferece serviços de reparo para computadores e celulares. Funcionamos de segunda a sexta, das 9h às 18h, e oferecemos consertos como troca de tela, substituição de bateria e remoção de vírus. O tempo médio de conserto é de 2 a 3 dias. Sempre forneça suporte em um tom profissional e amigável, incluindo emoções quando apropriado."
+                            O TechMax Helper é um assistente virtual projetado para fornecer suporte técnico aos clientes da TechMax. A empresa, com mais de 10 anos de experiência, oferece serviços de reparo para computadores e celulares. Funcionamos de segunda a sexta, das 9h às 18h, e oferecemos consertos como troca de tela, substituição de bateria e remoção de vírus. <br>
+                            
+                            O tempo médio de conserto é de 2 a 3 dias. Sempre forneça suporte em um tom profissional e amigável, incluindo emoções quando apropriado.<br>
+                            
+                            Caso não saiba a resposta, não invente e nem pesquise na internet, procure de uma forma educada falar que não sabe da resposta.<br>
+                            
+                            Quando ver que não esta conseguindo responder ou quando aplicável, coloque... mais informações fale com um dos atendentes: https://wa.me/85981594755
+                            
+                        </div>
+                    </div>
+                    <div class="example-item">
+                        <div class="example-item-title">Quebra-gelos</div>
+                        <div class="example-item-content">
+                            Reparos celular <br>
+                            Horário funcionamento
                         </div>
                     </div>
                 </div>
@@ -404,25 +426,44 @@
             
             <div class="example-grid" style="margin-top: 30px;">
                 <div class="example-item">
-                    <div class="example-item-title">Adicione Arquivos:</div>
+                    <div class="example-item-title">Carregar arquivos:</div>
                     <div class="example-item-content">
-                        Inclua documentos relevantes, como manuais de reparo, FAQs, e guias de suporte técnico.
+                        Inclua documentos relevantes como lista de valores e serviços, manuais de reparo, FAQs, e guias de suporte técnico.
                     </div>
                 </div>
                 
                 <div class="example-item">
-                    <div class="example-item-title">Configurações Avançadas:</div>
+                    <div class="example-item-title">Recursos:</div>
                     <div class="example-item-content">
-                        Ajuste o tom de voz e estilo de resposta para serem amigáveis e profissionais.
+                        Informe os recursos que o GPT Personalizado terá, tais como: 
+                        <span class="highlight">Busca na Web, Lousa, Geração de imagens do DALL-E, Intérprete de código e análise de dados</span>
+                    </div>
+                </div>
+
+                
+                <div class="example-item">
+                    <div class="example-item-title">Ações:</div>
+                    <div class="example-item-content">
+                        Aqui poderá criar ações externas, como conectar em um API e etc.
                     </div>
                 </div>
                 
                 <div class="example-item">
-                    <div class="example-item-title">Teste e Refine:</div>
+                    <div class="example-item-title">Configurações adicionais:</div>
                     <div class="example-item-content">
-                        Experimente o GPT e faça ajustes conforme necessário para garantir que as respostas estejam alinhadas com suas expectativas.
+                        Use dados de conversas em seu GPT para aprimorar nossos modelos <span class="highlight">(sugiro que desmarque essa opção)</span>
                     </div>
                 </div>
+                
+                <div class="example-item">
+                    <div class="example-item-title">Passos finais</div>
+                    <div class="example-item-content">
+                        Clique no Botão: <button class="btn">Criar</button> na parte superior direita<br>
+                        Escolha a forma de compartilhar (Apenas pra mim, Qualquer pessoa com o link ou Loja GPT) e clique em Salvar<br>
+                        <strong>Pronto, agora é só testar!</strong>
+                    </div>
+                </div>
+
             </div>
         </section>
         
@@ -451,6 +492,7 @@
                 </div>
                 <p>Simule várias interações com seu GPT para garantir que ele responda adequadamente em diferentes contextos.</p>
             </div>
+
         </section>
     </main>
     
@@ -458,7 +500,20 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Manual GPT Personalizado</div>
-                <p>Criado para auxiliar usuários Plus e Pro da OpenAI a configurarem seus próprios GPTs personalizados. Desenvolvido pelo Alex Souza</p>
+                <p>
+                    Criado para auxiliar usuários 
+                    <a href="https://openai.com/index/chatgpt-plus/" target="_blank" style="color: #fff; text-decoration: underline;">Plus</a> 
+                    e 
+                    <a href="https://openai.com/index/introducing-chatgpt-pro/" target="_blank" style="color: #fff; text-decoration: underline;">Pro</a> 
+                    da OpenAI a configurarem seus próprios GPTs personalizados.
+                </p>
+                <p>
+                    <strong>
+                        Desenvolvido por 
+                        <a href="https://linktr.ee/data.z" target="_blank" style="color: #fff; text-decoration: underline;">Alex Souza</a> 
+                        - Todos os direitos reservados © 2025
+                    </strong>
+                </p>
             </div>
         </div>
     </footer>
